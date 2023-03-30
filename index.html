@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS FLEX</title>
+	<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+	<style>
+
+		/* commonly used for containers:
+	`	display: flex; -> turns on flex
+		flex-direction: row or column; -> sets orientation
+		justify-content: ; -> align content on x when in a row and y in a column
+		align-items: ; -> align content on y when in a row and x in a column
+		flex-wrap: wrap;
+
+		commonly used for items:
+		flex-items:;
+		flex-grow:;
+		align-self:;
+
+		GO TO CSS-TRICKS.COM FOR MORE INFO
+		*/
+		body{
+			width: 100%;
+		}
+
+		.flex_container{
+			display: flex;
+			flex-direction: row;
+			height: 10vh; /*viewport height - aka 100% of the window*/
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap; /*helps with different screen sizes*/
+			background-color: #FFE4F2;
+			width: 100vw;
+			margin-top: -0.6%;
+			margin-left: -0.6%;
+		}
+
+		.title{
+			margin-left: 25px;
+			font-size: 28px;
+			font-family: 'Parisienne';
+		}
+
+		.searchbar{
+			border: solid 1px black;
+			height: 35px;
+			width: 700px;
+			margin: 0 auto;
+			position: relative;
+			background-color: white;
+		}
+
+		.searchicon{
+			height: 25px;
+			width: 25px;
+			margin-top: 5px;
+			margin-right: 10px;
+			float: right;
+		}		
+
+		.icons{
+			display: flex;
+			flex-direction: row;
+			margin-right: 220px;
+			float: right;
+		}
+
+		.home{
+			margin-top: 5px;
+			margin-right: 25px;
+
+		}
+
+		.user{
+			margin-top: 5px;
+			margin-right: 25px;
+
+		}
+
+		.cart{
+			margin-top: 5px;
+
+		}
+
+		.dimensions{
+			height: 20px;
+			width: 20px;
+		}
+		
+		.flex_item{
+			border:solid 1px pink;
+
+			flex-grow: 1;
+
+			display: flex;
+			flex-direction: row;
+
+			height: 60px;
+		}
+
+		.header-body{
+			width: 100vw;
+			display: flex;
+			flex-direction: row
+		}
+
+		.backgroundphoto{
+			width: 100vw;
+			margin-left: -0.6%;
+			display: flex;
+			flex-direction: row
+		}
+
+		.transparent{
+			border: solid 1px black;
+			float: right;
+		}
+
+		.header-image{
+			width: 100vw;
+			margin-left: -0.6%;
+		}
+
+		.ourproducts{
+			text-align: center;
+			margin-top: 3%;
+			margin-bottom: 5%;
+		}
+
+		.productrow{
+
+		}
+
+		.box-align{
+			display: flex;
+			flex-direction: row
+
+		}
+
+		.photos{
+			height: 400px;
+			width: 400px;
+			border-radius: 10%;
+			border: solid 2px pink;
+			margin-left: 30%;
+			margin-bottom: 10%;
+
+
+		}
+
+		.second-box{
+			height: 400px;
+			width: 600px;
+			border-radius: 10%;
+			border: solid 2px pink;
+			margin-left: 15%;
+		}
+
+		.description {
+			margin-left: 5%;
+		}
+
+		.testimonials{
+			text-align: center;
+			margin-top: 3%;
+			margin-bottom: 5%;
+			background-color: #F9DAE4;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="flex_container">
+		<div class="title">The Baker's Candle Shop</div>
+		<div class="searchbar">
+			<img src="images/magnifying.png" class="searchicon"></img>
+		</div>
+		<div class="icons">
+			<div class="home">
+				<img src="images/home.png" class="dimensions"></img>
+			</div>
+			<div class="user">
+				<img src="images/user.png" class="dimensions"></img>
+			</div>
+			<div class="cart">
+				<img src="images/cart.png" class="dimensions"></img>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<img src="images/candier.png" class="header-image"></img>
+	</div>
+
+	<div class="ourproducts">
+		<h1> OUR PRODUCTS </h1>
+	</div>
+
+	<div class="productrow">
+		<div class="box-align">
+			<div>
+				<img src="images/bday.png" class="photos">
+			</div>
+			<div class="second-box">
+				<h1 class="description">Birthday Cake Candle</h1>
+				<p>The Baker's Candle Shop</p>
+				<p>$31</p>
+				<p>Feed me cake and tell me I’m pretty! Girl, your birthday is gonna be so lit! Lay back, make a wish and hit the ultimate sugar high with notes of delicious gooey butter cream and candied vanilla (plus everything’s better with sprinkles!) xo</p>
+				<p>Smells Like:</p>
+				<ol>Birthday Cake</ol>
+				<ol>Gooey Buttercream</ol>
+				<ol>Gourmand</ol>
+				<ol>Bourbon</ol>
+			</div>
+		</div>
+		<div class="box-align">
+			<div>
+				<img src="images/cereal.png" class="photos">
+			</div>
+			<div class="second-box">
+				<h1 class="description">Can't Adult Cereal Candle</h1>
+				<p>The Baker's Candle Shop</p>
+				<p>$31</p>
+				<p>Remember when you were a kid and the most stressful thing in life was stealing out to go to that party? Now you're faking excuses to avoid going out, and eating cereal on the couch. Adulting is overrated! xo</p>
+				<p>Smells Like:</p>
+				<ol>Fruit Loops</ol>
+				<ol>Cereal Milk</ol>
+				<ol>Citrus</ol>
+				<ol>Grapefruit</ol>
+			</div>
+		</div>
+		<div>
+			<div class="first-box">
+				<img src="images/donut.png" class="photos">
+			</div>
+			<div class="second-box">
+				<h1 class="description">Donut Worry Candle</h1>
+				<p>The Baker's Candle Shop</p>
+				<p>$31</p>
+				<p>Babe, don't stress the small stuff, but definitely enjoy the little things in life. Like this adorable glazed donut candle, covered in sprinkles! Light it up, relax, and forget about your troubles. Honey, todays a great day to be happy! xo</p>
+				<p>Smells Like:</p>
+				<ol>Strawberry Cream</ol>
+				<ol>Frosted Donut</ol>
+				<ol>Citrus Sugar</ol>
+				<ol>Vanilla</ol>
+			</div>
+		</div>
+		<div>
+			<div class="first-box">
+				<img src="images/icecream.png" class="photos">
+			</div>
+			<div class="second-box">
+				<h1 class="description">Love You Ice Cream Candle</h1>
+				<p>The Baker's Candle Shop</p>
+				<p>$31</p>
+				<p>Everyone needs a cutie like you to laugh with, cuddle up to, and make really bad decisions with. We’re like a tiny (but mighty) little gang. If you haven’t noticed already, I think you’re pretty cool. Honey, honestly, you complete me xo</p>
+				<p>Smells Like:</p>
+				<ol>Soft Serve Ice Cream</ol>
+				<ol>Smooth Buttercream</ol>
+				<ol>Gourmand</ol>
+				<ol>Vanilla</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="testimonials">
+		<h1> TESTIMONIALS </h1>
+	</div>
+
+	
+
+</body>
+</html>
